@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+        <link rel="stylesheet" href="assets/css_layout/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css_layout/sidebar.css">
+        <link rel="stylesheet" href="assets/css_layout/styles.css" media="all">
+        <link rel="stylesheet" href="assets/css_layout/estilos-impresion.css" media="print">
+        <link rel="stylesheet" href="edit_styles.css" media="all">
+        <!-- favicon -->
+        <link rel="icon" href="./assets/favicon.ico" type="icon">
+        <!-- Font Awesome JS -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="wrapper" id="invoice">
+            <!-- iframe menu WJP -->
+            <iframe id="embedMenu" src="https://reports-world-justice-project.pantheonsite.io/wjp-index"></iframe>
+            <!-- Breadcrumb -->
+            <div class="breadcrumb-content">
+                <div class="wrap-breadcrum">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="https://worldjusticeproject.org/">Home</a>
+                        </li>
+                        <li>
+                                <a href="https://worldjusticeproject.org/our-work">Our Work</a>
+                        </li>
+                        <li>
+                            <a href="https://worldjusticeproject.org/our-work/wjp-rule-law-index">Research and Data</a>
+                        </li>
+                        <li>
+                            <a href="https://worldjusticeproject.org/our-work/research-and-data/rule_of_law_COUNTRY_YEAR">Rule of Law in North Macedonia 2023</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>                    
+
+            <!-- CTA MENU / only WEB Browser  -->
+            <div class="no-print wrap-menu" style="z-index:3; position:fixed; top: 50%; margin-top:-220px;">
+                <button type="button" id="sidebarCollapse" class="navbar-btn active">
+                    <div class="row align-baseline mx-0">
+                        <div class="col-4 px-0">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="col-8 px-0">
+                            <p>Content</p>
+                        </div>
+                    </div>
+                </button>
+            </div>
+                
+            <!-- MENU / only WEB Browser  -->
+            <nav id="sidebar" class="no-print mt-5 nav active">
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a id="MenuCover" class="btn-level1 menuOpt" href="#Cover">
+                            <img src="assets/images_layout/icnHome.svg" class="mx-2"><span>Cover</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="MenuAbout" class="btn-level1 menuOpt" href="#About">
+                            <img src="assets/images_layout/icnChapi.svg" class="mx-2"><span>About this Report</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="MenuROLI" class="btn-level1 menuOpt" href="#OverviewROLI">
+                            <img src="assets/images_layout/icnChapii.svg" class="mx-2"><span>ROLI overview</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="DropDown" class="btn-level1"  href="#pageSubmenu">
+                            <img src="assets/images_layout/icnChapiii.svg" class="mx-2"><span>Thematic Findings <span class="icn-dropdown"></span></span>
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a class="btn-level2 menuOpt" href="#SectionI"><span>Section I: Authoritarianism, Fundamental Freedoms, and Accountability</span></a>
+                                <a class="btn-level2 link-collapse" href="#SectionI">I</a>
+                            </li>
+                            <li>
+                                <a class="btn-level2 menuOpt" href="#SectionII"><span>Section II: Corruption and Trust</span></a>
+                                <a class="btn-level2 link-collapse" href="#SectionII">II</a>
+                            </li>
+                            <li>
+                                <a class="btn-level2 menuOpt" href="#SectionIII"><span>Section III: Security and Criminal Justice</span></a>
+                                <a class="btn-level2 link-collapse" href="#SectionIII">III</a>
+                            </li>
+                            <li>
+                                <a class="btn-level2 menuOpt" href="#SectionIV"><span>Section IV: Access to Justice</span></a>
+                                <a class="btn-level2 link-collapse" href="#SectionIII">IV</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="MenuProject" class="btn-level1 menuOpt" href="#Project">
+                            <img src="assets/images_layout/icnChapiv.svg" class="mx-2"><span>Project Design</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="MenuAppendix" class="btn-level1 menuOpt" href="#Appendix">
+                            <img src="assets/images_layout/icnChapiv.svg" class="mx-2"><span>Appendix</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="MenuDownload" class="btn-level1 menuOpt" onclick="window.open('Report_WJP.pdf')">
+                            <img src="assets/images_layout/icnDownload.svg" class="mx-2"><span>Download</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Begins CONTENT of the report  -->
+            <div id="content">
+                    
+                <!-- COVER  -->
+                <section id="Cover" class="bg-page-cover">
+                    <div class="logo-cover">
+                        <img src="assets/images_layout/logo.svg">
+                    </div>
+                    <div class="container">
+                        <div class="text-cover" style="height:calc(100vh - 297px)">
+                            <div class="row align-items-end h-100">
+                                <div class="col-12">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-9 leftside-line p-3">
+                                            <h1>The Rule of Law <br>in North Macedonia</h1>
+                                            <p class="text-white mb-0">Key Findings from the General  <br>Population Poll 2023 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end COVER  -->
+                    
+                <!-- ACKNOWLEDGMENTS  -->
+                <section id="Acknowledgements" class="bg-page-gray pb-5">
+                    <div class="container mb-4 pt-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 mt-4">
+                                <p class="acknowledgements">Acknowledgements</p>
+                            </div>
+                            <div class="col-md-11">
+                                <p>
+                                    <i>The Rule of Law in North Macedonia: Key Findings from the General Population Poll 2023</i> was produced by the World Justice Project under the research oversight of Alejandro Ponce and the executive direction of Elizabeth Andersen.<br><br>
+                                    The production of this report was led by Ana María Montoya. This report was prepared by Erin Campbell, James Davis, Dalia Habiby, Artha Pillai, Santiago Pardo, and Carlos Toruño.<br><br>
+                                    The findings in this report are taken from the General Population Poll (GPP) conducted for the World Justice Project in 2023. The GPP’s conceptual framework and methodology were developed by Mark David Agrast, Juan Carlos Botero, and Alejandro Ponce. The production of this iteration of country report series was developed by Ana María Montoya, Santiago Pardo, Alejandro Ponce, Tanya Primiani, Hannah Rigazzi, Natalia Rodríguez Cajamarca, Victoria Thomaides, and Carlos Toruño Paniagua.<br><br>
+                                    Sampling, fieldwork, and data processing in North Macedonia was conducted by IPSOS Strategic Marketing.<br><br>
+                                    Mariana Lopez was the graphic design lead for this report. FlitStudio served as lead website developer with assistance from Natalia Jardon, Mariana Lopez, and Enrique Paulin.<br><br>
+                                    This report was made possible with the support of the U.S. Department of State’s Bureau of International Narcotics and Law Enforcement Affairs' Office of Western Hemisphere (INL). The views expressed in this report are those of the survey respondents and do not necessarily represent the views of INL.<br><br>
+                                    Photo for cover provided by Kisa Markiza, from iStock.
+                                </p>
+                                <p>
+                                    © Copyright 2023 by the World Justice Project.<br><br>
+                                    Requests to reproduce this document should be sent to:<br>
+                                    <span class="line-separator my-2"></span>
+                                    Alejandro Ponce<br>
+                                    World Justice Project<br>
+                                    1025 Vermont Avenue NW, Suite 1200<br>
+                                    Washington, DC 20005, USA<br>
+                                    Email: aponce@worldjusticeproject.org
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid mt-5 mb-5 bg-data-Acknowledgements">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-md-11 bg-light ml-4">
+                                    <div class="row p-5 data-Acknowledgements">
+                                        <span class="pleca-data"></span>
+                                        <div class="col-md-3 mb-3">
+                                            <p class="m-0">
+                                                <span class="capital-letter">Washington, DC</span><br>
+                                                1025 Vermont Avenue NW, Suite 1200
+                                                Washington, DC 20005, USA<br>
+                                                <span class="capital-letter">P</span> <a class="link-phone" href="tel:+12024079330">+1 (202) 407-9330</a>
+                                            </p>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <p class="m-0">
+                                                <span class="capital-letter">Mexico City</span><br>
+                                                Gobernador José Guadalupe Covarrubias
+                                                57-20, San Miguel Chapultepec, 11850,<br>
+                                                Miguel Hidalgo, Mexico City<br>
+                                                <a href="https://worldjusticeproject.mx/" target="_blank" class="c-purple"><i>worldjusticeproject.mx</i></a>
+                                            </p>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <p class="m-0">
+                                                <a href="https://worldjusticeproject.org"><span class="mr-2"><img src="assets/images_layout/web.svg" width="20px" /></span>worldjusticeproject.org</a>
+                                                <a href="https://www.facebook.com/thewjp/"><span class="mr-2"><img src="assets/images_layout/fb.svg" width="20px" /></span>facebook.com/thewjp/</a>
+                                                <a href="https://twitter.com/TheWJP"><span class="mr-2"><img src="assets/images_layout/tw.svg" width="20px" /></span>twitter.com/TheWJP</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end ACKNOWLEDGMENTS  -->
+                        
+                <!-- TABLE of CONTENTS  -->
+                <section class="print table-contents">
+                    <div class="container">
+                        <div class="row justify-content-center py-5">
+                            <div class="col-sm-8 col-md-7 mt-5">
+                                
+                                <p class="title-p">TABLE OF CONTENTS</p>
+                                
+                                <p class="mb-0" style="color:#482d8a"><a href="#About"><em class="ff-a">1.  ABOUT THIS REPORT</em></a></p>
+                                <p class="li mb-0"><a href="#AboutThisReport"><span>5</span>About This Report</a></p>
+                                <p class="li"><a href="#ExecutiveFindings"><span>6</span>Executive Findings</a></p>
+                                <p class="mb-0" style="color:#482d8a"><a href="#About"><em class="ff-a">2.  ROLI OVERVIEW</em></a></p>
+                                <p class="li mb-0"><a href="#ROLI"><span class="hide-number">10</span>Rule of Law Index (ROLI) in North Macedonia</a></p>
+                                <p class="li"><a href="#Factors"><span class="hide-number">11</span>ROLI Factors in North Macedonia </a></p>
+                                <p class="mt-2" style="color:#482d8a"><a href="#SectionI"><em class="ff-a">3.  THEMATIC FINDINGS</em></a></p>
+                                <p class="mb-0" style="color:#482d8a"><a href="#SectionI"><em class="ff-a">SECTION I: AUTHORITARIANISM, FUNDAMENTAL FREEDOMS, AND GOVERNMENT ACCOUNTABILITY</em></a></p>
+                                <p class="li mb-0"><a href="#Authoritarianism"><span class="hide-number">13</span>Authoritarianism</a></p>
+                                <p class="li mb-0"><a href="#FundamentalFreedoms"><span class="hide-number">16</span>Fundamental Freedoms</a></p>
+                                <p class="li"><a href="#GovernmentAccountability"><span class="hide-number">19</span>Government Accountability</a></p>
+                                
+                                <p class="mb-0" style="color:#482d8a"><a href="#SectionII"><em class="ff-a">SECTION II: CORRUPTION AND TRUST</em></a></p>
+                                <p class="li mb-0"><a href="#Corruption"><span class="hide-number">21</span>Corruption</a></p>
+                                <p class="li mb-0"><a href="#Bribery1"><span class="hide-number">23</span>Bribery Victimization</a></p>
+                                <p class="li mb-0"><a href="#Trust"><span class="hide-number">24</span>Trust</a></p>
+                                <p class="li"><a href="#Trust2"><span class="hide-number">25</span>Disaggregated Perceptions</a></p>
+                                
+                                <p class="mb-0" style="color:#482d8a"><a href="#SectionIII"><em class="ff-a">SECTION III: SECURITY AND CRIMINAL JUSTICE</em></a></p>
+                                <p class="li mb-0"><a href="#CrimeVictimization"><span class="hide-number">27</span>Crime Victimization</a></p>
+                                <p class="li mb-0"><a href="#Security"><span class="hide-number">28</span>Security</a></p>
+                                <p class="li mb-0"><a href="#CriminalJustice"><span class="hide-number">29</span>Criminal Justice</a></p>
+                                <p class="li mb-0"><a href="#Police"><span class="hide-number">32</span>Police</a></p>
+                                <p class="li"><a href="#VictimSupport"><span class="hide-number">34</span>Victim Support</a></p>
+                                
+                                <p class="mb-0" style="color:#482d8a"><a href="#SectionIV"><em class="ff-a">SECTION IV: ACCESS TO JUSTICE</em></a></p>
+                                <p class="li"><a href="#AccessJusticeJourney"><span class="hide-number">36</span>Access to Justice</a></p>
+
+                                <p class="mb-0" style="color:#482d8a"><a href="#Project"><em class="ff-a">4. PROJECT DESIGN</em></a></p>
+                                <p class="li"><a href="#Methodology"><span class="hide-number">44</span>Methodology</a></p>
+                                
+                                <p class="mb-0" style="color:#482d8a"><a href="#Appendix"><em class="ff-a">5. APPENDIX</em></a></p>
+                                <!-- <p class="li mb-0"><a href="#MethodologicalMaterials"><span class="hide-number">46</span>Appendix</a></p> -->
+                                <p class="li mb-0"><a href="#AboutTheWJP"><span class="hide-number">47</span>About the WJP</a></p>
+                                <p class="li"><a href="#OtherPublications"><span class="hide-number">48</span>Other Publications</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end TABLE of CONTENTS  -->
+
+                <!-- ABOUT THIS REPORT  (purple cover) -->
+                <section id="About" class="bg-purple">
+                    <div class="container">
+                        <div class="height85vh">
+                            <div class="row h-100 p-5">
+                                <div class="col-12">
+                                    <div class="row align-items-center h-100">
+                                        <div class="col-12">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-4 border-left pl-4">
+                                                    <h3 class="text-white mb-0">
+                                                        ABOUT <br>
+                                                        THIS REPORT
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-center mt-5">
+                                                <div class="col-md-4">
+                                                    <p class="li mb-0 text-white"><span class="hide-number">5</span><a href="#AboutThisReport">About This Report</a></p>
+                                                    <p class="li text-white"><span class="hide-number">6</span><a href="#ExecutiveFindings">Executive Findings</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end ABOUT THIS REPORT  -->
+                        
+                <!-- ABOUT THIS REPORT (EFFECTIVE RULE OF LAW  page 5) -->
+                <section id="AboutThisReport">
+                    <div class="container pt-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 mt-4">
+                                <p class="title-p">ABOUT THIS REPORT</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 mt-4">
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                        <p>
+                                            <b class="c-purple">EFFECTIVE RULE OF LAW</b> reduces corruption, combats poverty and disease, and protects people from injustices large and small. Strengthening the rule of law is an important objective for governments, donors, and civil society organizations around the world. To be effective, rule of law development requires clarity about the fundamental features that define the rule of law, as well as an adequate basis for its evaluation and measurement.
+                                        </p>
+                                        <p>
+                                            <i>The Rule of Law in North Macedonia: Key Findings from the General Population Poll 2023</i>  presents question-level data drawn from the General Population Poll (GPP), an original data source designed and collected by the World Justice Project.
+                                        </p>
+                                        <p>
+                                            The GPP was conducted between May and July 2023 through face-to-face interviews to a nationally representative sample of 1,594 North Macedonian households. This poll was designed to capture data on the experiences and perceptions of ordinary people regarding a variety of themes related to the rule of law.
+                                        </p>
+                                    </div>
+                                    <div class="col-12 mb-4 bg-quote p-5">
+                                        <p class="p-quote">
+                                            <i>
+                                                This report represents the voices of people in North Macedonia and their experiences with the rule of law in their country.
+                                            </i>
+                                        </p>
+                                    </div>
+                                    <div class="col-12">
+                                        <p>
+                                            The data derived from the General Population Poll is presented in this report as thematic briefs, each one highlighting a different dimension of the rule of law from the perspective of North Macedonians. These thematic briefs focus on the current rule of law ecosystem in North Macedonia while simultaneously illuminating changes over time. Each section touches upon perceptions of and attitudes towards the following topics: government accountability, authoritarianism, fundamental freedoms, corruption, trust in institutions, the criminal justice system and its actors, crime victimization, security, police performance and access to justice.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-number">I About This Report <b>5</b></div>
+                </section>
+                <!-- end ABOUT THIS REPORT (EFFECTIVE RULE OF LAW)  -->
+
+                 <!-- EXECUTIVE FINDINGS 1. GOVERNMENT ACCOUNTABILITY (page 6) -->
+                 <section id="ExecutiveFindings" class="bg-page-gray">
+                    <div class="container mb-4 pt-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 mt-4">
+                                <p class="title-p">EXECUTIVE FINDINGS</p>
+                            </div>
+                        </div>
+                        
+                        <div class="row justify-content-center">
+                            <div class="col-md-11">
+                                <div class="row">
+                                    <div class="col-md-12 mb-0">
+                                        <p>
+                                            <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices hendrerit mauris et vehicula. Cras sollicitudin tristique dolor, ac faucibus neque rhoncus nec. Morbi semper diam eget augue porta dictum. Etiam nibh nisi, laoreet id nunc nec, finibus lobortis leo. Mauris imperdiet dolor in lectus vestibulum venenatis. Nam malesuada vitae tortor a sollicitudin. Vivamus sed risus augue. Fusce magna eros, aliquet vel tempor vitae, convallis in libero.</i>                                           
+                                        </p>
+                                        <br>
+
+                                        <div class="col bl-purple title-section">
+                                            <p class="mb-0 ff-a c-purple sectitle">SECTION 1</p>
+                                            <p class="fs-20 sectitle"><b>Authoritarianism, Fundamental Freedoms, and Government Accountability</b></p>
+                                        </div>
+
+                                        <p class="mt-3 mb-1">
+                                            <span class="subtitle-p">1. Authoritarianism</span><br>
+                                            <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices hendrerit mauris et vehicula. Cras sollicitudin tristique dolor, ac faucibus neque rhoncus nec. Morbi semper diam eget augue porta dictum. Etiam nibh nisi, laoreet id nunc nec, finibus lobortis leo. Mauris imperdiet dolor in lectus vestibulum venenatis. Nam malesuada vitae tortor a sollicitudin. Vivamus sed risus augue. Fusce magna eros, aliquet vel tempor vitae, convallis in libero.</b>
+                                        </p>
+                                        <p class="mt-3 mb-1">
+                                            <span class="subtitle-p">2. Fundamental Freedoms</span><br>
+                                            <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices hendrerit mauris et vehicula. Cras sollicitudin tristique dolor, ac faucibus neque rhoncus nec. Morbi semper diam eget augue porta dictum. Etiam nibh nisi, laoreet id nunc nec, finibus lobortis leo. Mauris imperdiet dolor in lectus vestibulum venenatis. Nam malesuada vitae tortor a sollicitudin. Vivamus sed risus augue. Fusce magna eros, aliquet vel tempor vitae, convallis in libero.</b>
+                                        </p>
+                                        <p class="mt-3 mb-1">
+                                            <span class="subtitle-p">3. Government Accountability </span><br>
+                                            <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices hendrerit mauris et vehicula. Cras sollicitudin tristique dolor, ac faucibus neque rhoncus nec. Morbi semper diam eget augue porta dictum. Etiam nibh nisi, laoreet id nunc nec, finibus lobortis leo. Mauris imperdiet dolor in lectus vestibulum venenatis. Nam malesuada vitae tortor a sollicitudin. Vivamus sed risus augue. Fusce magna eros, aliquet vel tempor vitae, convallis in libero.</b>
+                                        </p>
+
+                                        <br>
+                                        
+                                        <div class="col bl-purple title-section">
+                                            <p class="mb-0 ff-a c-purple sectitle">SECTION 2</p>
+                                            <p class="fs-20 sectitle"><b>Corruption and Trust</b></p>
+                                        </div>
+
+                                        <p class="mt-3 mb-1">
+                                            <span class="subtitle-p">4. Corruption </span><br>  
+                                        </p>
+                                        <p>
+                                            <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices hendrerit mauris et vehicula. Cras sollicitudin tristique dolor, ac faucibus neque rhoncus nec. Morbi semper diam eget augue porta dictum. Etiam nibh nisi, laoreet id nunc nec, finibus lobortis leo. Mauris imperdiet dolor in lectus vestibulum venenatis. Nam malesuada vitae tortor a sollicitudin. Vivamus sed risus augue. Fusce magna eros, aliquet vel tempor vitae, convallis in libero.</b>
+                                        </p>
+                                        <p class="mt-3 mb-1">
+                                            <span class="subtitle-p">5. Trust</span><br>
+                                        </p>
+                                        <p>
+                                            <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices hendrerit mauris et vehicula. Cras sollicitudin tristique dolor, ac faucibus neque rhoncus nec. Morbi semper diam eget augue porta dictum. Etiam nibh nisi, laoreet id nunc nec, finibus lobortis leo. Mauris imperdiet dolor in lectus vestibulum venenatis. Nam malesuada vitae tortor a sollicitudin. Vivamus sed risus augue. Fusce magna eros, aliquet vel tempor vitae, convallis in libero.</b>
+                                        </p>
+                                        <p class="mt-3 mb-1">
+                                            <span class="subtitle-p">6. Bribery Victimization</span><br>
+                                        </p>
+                                        <p>
+                                            <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices hendrerit mauris et vehicula. Cras sollicitudin tristique dolor, ac faucibus neque rhoncus nec. Morbi semper diam eget augue porta dictum. Etiam nibh nisi, laoreet id nunc nec, finibus lobortis leo. Mauris imperdiet dolor in lectus vestibulum venenatis. Nam malesuada vitae tortor a sollicitudin. Vivamus sed risus augue. Fusce magna eros, aliquet vel tempor vitae, convallis in libero.</b>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-number left-number"><b>6</b> I Executive Findings</div>
+                </section>
+                <!-- end EXECUTIVE FINDINGS 1. GOVERNMENT ACCOUNTABILITY -->
+
+                <!-- EXECUTIVE FINDINGS 7. CRIMINAL JUSTICE ACTORS (page 7) -->
+                <section id="ExecutiveFindingsPage2">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 mt-2">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="mt-3 mb-1">
+                                            <span class="subtitle-p">7. Disaggregated Perceptions of Corruption and Trust </span><br>
+                                        </p>
+                                        <p>
+                                            <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices hendrerit mauris et vehicula. Cras sollicitudin tristique dolor, ac faucibus neque rhoncus nec. Morbi semper diam eget augue porta dictum. Etiam nibh nisi, laoreet id nunc nec, finibus lobortis leo. Mauris imperdiet dolor in lectus vestibulum venenatis. Nam malesuada vitae tortor a sollicitudin. Vivamus sed risus augue. Fusce magna eros, aliquet vel tempor vitae, convallis in libero.</b>
+                                        </p>
+                                    </div>
+                                    <br>
+
+                                    <div class="col-md-12 mt-4">
+                                        <div class="col bl-purple title-section">
+                                            <p class="mb-0 ff-a c-purple sectitle">SECTION 3</p>
+                                            <p class="fs-20 sectitle"><b>Security and Criminal Justice</b></p>
+                                        </div>
+                                        <p class="mt-4 mb-1">
+                                            <span class="subtitle-p">8. Crime Victimization </span><br>
+                                        </p>
+                                        <p>
+                                            <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices hendrerit mauris et vehicula. Cras sollicitudin tristique dolor, ac faucibus neque rhoncus nec. Morbi semper diam eget augue porta dictum. Etiam nibh nisi, laoreet id nunc nec, finibus lobortis leo. Mauris imperdiet dolor in lectus vestibulum venenatis. Nam malesuada vitae tortor a sollicitudin. Vivamus sed risus augue. Fusce magna eros, aliquet vel tempor vitae, convallis in libero.</b>
+                                        </p>
+                                        <p class="mt-3 mb-1">
+                                            <span class="subtitle-p">9. Security</span><br>
+                                            <p>
+                                                <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices hendrerit mauris et vehicula. Cras sollicitudin tristique dolor, ac faucibus neque rhoncus nec. Morbi semper diam eget augue porta dictum. Etiam nibh nisi, laoreet id nunc nec, finibus lobortis leo. Mauris imperdiet dolor in lectus vestibulum venenatis. Nam malesuada vitae tortor a sollicitudin. Vivamus sed risus augue. Fusce magna eros, aliquet vel tempor vitae, convallis in libero.</b>
+                                            </p>
+                                        </p>
+                                        <p class="mt-3 mb-1">
+                                            <span class="subtitle-p">10. Criminal Justice</span><br>
+                                            <p>
+                                                <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices hendrerit mauris et vehicula. Cras sollicitudin tristique dolor, ac faucibus neque rhoncus nec. Morbi semper diam eget augue porta dictum. Etiam nibh nisi, laoreet id nunc nec, finibus lobortis leo. Mauris imperdiet dolor in lectus vestibulum venenatis. Nam malesuada vitae tortor a sollicitudin. Vivamus sed risus augue. Fusce magna eros, aliquet vel tempor vitae, convallis in libero.</b>
+                                            </p>
+    
+                                        <p class="mt-3 mb-1">
+                                            <span class="subtitle-p">11. Police Performance</span><br>
+                                            <p>
+                                                <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices hendrerit mauris et vehicula. Cras sollicitudin tristique dolor, ac faucibus neque rhoncus nec. Morbi semper diam eget augue porta dictum. Etiam nibh nisi, laoreet id nunc nec, finibus lobortis leo. Mauris imperdiet dolor in lectus vestibulum venenatis. Nam malesuada vitae tortor a sollicitudin. Vivamus sed risus augue. Fusce magna eros, aliquet vel tempor vitae, convallis in libero.</b>                                         
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-number">I Executive Findings <b>7</b></div>
+                </section>
+                <!-- end EXECUTIVE FINDINGS 7. CRIMINAL JUSTICE ACTORS -->
+
+                <!-- EXECUTIVE FINDINGS 7. CRIMINAL JUSTICE ACTORS (page 7) -->
+                <section id="ExecutiveFindingsPage3" class="bg-page-gray">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 mt-2">
+                                <div class="row">
+                                    <div class="col-md-12 mt-4">
+                                        <div class="col bl-purple title-section">
+                                            <p class="mb-0 ff-a c-purple sectitle">SECTION 4</p>
+                                            <p class="fs-20 sectitle"><b>Access to Justice</b></p>
+                                        </div>
+                                        <p class="mt-4 mb-1">
+                                            <span class="subtitle-p">11. Access to Justice </span><br>
+                                        </p>
+                                        <p>
+                                            <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices hendrerit mauris et vehicula. Cras sollicitudin tristique dolor, ac faucibus neque rhoncus nec. Morbi semper diam eget augue porta dictum. Etiam nibh nisi, laoreet id nunc nec, finibus lobortis leo. Mauris imperdiet dolor in lectus vestibulum venenatis. Nam malesuada vitae tortor a sollicitudin. Vivamus sed risus augue. Fusce magna eros, aliquet vel tempor vitae, convallis in libero.</b>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-number left-number"><b>8</b> I Executive Findings </div>
+                </section>
+                <!-- end EXECUTIVE FINDINGS 7. CRIMINAL JUSTICE ACTORS -->
+
+                <!-- SECTION 0 OVERVIEW ROLI IN NORTH MACEDONIA  (purple background) -->
+
+                <section id="OverviewROLI" class="bg-purple">
+                    <div class="container">
+                        <div class="height85vh">
+                            <div class="row h-100 p-5">
+                                <div class="col-12">
+                                    <div class="row align-items-center h-100">
+                                        <div class="col-12">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-4 border-left pl-4">
+                                                    <h3 class="text-white mb-0">
+                                                        RULE OF LAW INDEX IN NORTH MACEDONIA
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-center mt-5">
+                                                <div class="col-md-4">
+                                                    <p class="li mb-0 text-white"><span class="hide-number">10</span><a href="#ROLI"> Rule of Law Index in North Macedonia </a></p>
+                                                    <p class="li text-white"><span class="hide-number">11</span><a href="#Factors"> Factors in North Macedonia </a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- end SECTION 0 OVERVIEW ROLI IN NORTH MACEDONIA  (purple background) -->
+                
+                <!-- SECTION 0 OVERVIEW ROLI IN NORTH MACEDONIA (content) -->
+
+                <!-- First page  -->
+
+                <section id="ROLI">
+                    <div class="container pt-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 mt-4">
+                                <p class="title-p">Rule of Law Index Overview</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-md-11 ml-4 bl-purple">
+                                <p class="fs-20 mb-0"><b>Rule of Law Index in North Macedonia</b></p>
+                                <p class="mb-0"><i>North Macedonia perfomance in Rule of Law Index</i></p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 mb-4">
+                                <img id = "OverviewROLI" src="charts_and_images/imgChart21/figure_21.svg" class="img-chart">  
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-md-11 mb-0">
+                                <p class="reference"><small>Source: WJP General Population Poll 2023 and WJP Qualified Respondents’ Questionnaires 2023</small></p>
+                            </div>
+                        </div>
+                    </div>                
+                    <div class="page-number left-number"><b>10</b> II ROLI overview</div>
+                </section>
+
+                <!-- End First Page  -->
+
+                <!-- Second Page  -->
+                
+                <section id="Factors" class="bg-page-gray">
+                    <div class="container pt-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 mt-4">
+                                <p class="title-p">Rule of Law Index Overview</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-md-11 ml-4 bl-purple">
+                                <p class="fs-20 mb-0"><b>Rule of Law Factors in North Macedonia</b></p>
+                                <p class="mb-0"><i>North Macedonia perfomance in Rule of Law Index by Factors</i></p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 mb-4">
+                                <img id = "OverviewROLI" src="charts_and_images/imgChart21/figure_22.svg" class="img-chart">  
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-md-11 mb-0">
+                                <p class="reference"><small>Source: WJP General Population Poll 2023 and WJP Qualified Respondents’ Questionnaires 2023</small></p>
+                            </div>
+                        </div>
+                    </div>                
+                    <div class="page-number">II ROLI overview<b>11</b></div>
+                </section>
+
+                <!-- End Second Page -->
+
+                <!-- SECTION I AUTHORITARIANISM, FUNDAMENTAL FREEDOMS, AND ACCOUNTABILITY  (purple background) -->
+                <section id="SectionI" class="bg-purple">
+                    <div class="container">
+                        <div class="height85vh">
+                            <div class="row h-100 p-5">
+                                <div class="col-12">
+                                    <div class="box-title">
+                                        <p>THEMATIC FINDINGS</p>
+                                    </div>
+                                    <div class="row align-items-center h-100">
+                                        <div class="col-12">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-4 border-left pl-4">
+                                                    <p class="text-white mb-0 ff-a">SECTION I</p>
+                                                    <h3 class="text-white mb-0">
+                                                        AUTHORITARIANISM, FUNDAMENTAL FREEDOMS, <br>
+                                                        AND GOVERNMENT ACCOUNTABILITY
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-center mt-5">
+                                                <div class="col-md-4">
+                                                    <p class="li mb-0 text-white"><span class="hide-number">13</span><a href="#Authoritarianism">Authoritarianism</a></p>
+                                                    <p class="li mb-0 text-white"><span class="hide-number">16</span><a href="#FundamentalFreedoms">Fundamental Freedoms</a></p>
+                                                    <p class="li text-white"><span class="hide-number">19</span><a href="#GovernmentAccountability">Government Accountability</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end SECTION I AUTHORITARIANISM, FUNDAMENTAL FREEDOMS, AND ACCOUNTABILITY  -->
+
+                <!-- Chart 1  -->
+                <section id="Authoritarianism">
+                    <div class="container pt-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 mt-4">
+                                <p class="title-p mb-0">AUTHORITARIANISM</p><br>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mb-3">
+                            <div class="col-md-11 ml-4 bl-purple">
+                                <p class="mb-0 ff-a c-purple">CHART 1.</p>
+                                <p class="fs-20 mb-0"><b>Perceptions of Authoritarian Behaviors</b></p>
+                                <p class="mb-2"><i>Percentage of respondents in North Macedonia who believe that top government officials...</i></p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-11">
+                                <p>
+                                    <span class="bullet c-strongdisagree ml-4"></span>Strongly Agree
+                                    <span class="bullet c-disagree ml-4"></span>Agree
+                                    <span class="bullet c-dkna ml-4"></span>No answer
+                                    <span class="bullet c-agree ml-4"></span>Disagree 
+                                    <span class="bullet c-strongagree ml-4"></span>Strongly Disagree
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-md-11">
+                                <p class="mb-4"><b><span class="lateral-bar">|</span> ATTACKS ON ELECTORAL SYSTEMS AND OPPOSITION PARTIES</b></p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 mb-4">
+                                <img src="charts_and_images/imgChart1/figure_1A.svg" class="img-chart">
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-md-11">
+                                <p class="mb-4"><b><span class="lateral-bar">|</span> ATTACKS ON THE JUDICIARY</b></p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 mb-4">
+                                <img src="charts_and_images/imgChart1/figure_1B.svg" class="img-chart">
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-md-11">
+                                <p class="mb-4"><b><span class="lateral-bar">|</span> ATTACKS ON THE MEDIA AND MISINFORMATION</b></p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 mb-4">
+                                <img src="charts_and_images/imgChart1/figure_1C.svg" class="img-chart">
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mt-4 foot-note">
+                            <div class="col-md-11 mb-0">
+                                <p class="reference"><small>Source: WJP General Population Poll 2023</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-number">III Thematic Findings <b>13</b></div>
+                </section>
+                <!-- end Chart 1 -->
+    </body>
+</html>
